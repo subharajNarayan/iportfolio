@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,700;0,900;1,200;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+// @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css');
+// @import url('https://use.fontawesome.com/releases/v6.2..1/css/all.css');
+@import url('https://use.fontawesome.com/releases/v5.15.4/css/all.css');
+
+
+@import "asstes/scss/frameworks/cbootstrap";
+
+@import "asstes/scss/abstracts/variables";
+@import "asstes/scss/abstracts/mixins";
+
+@import "./asstes/scss/base/animations";
+@import "./asstes/scss/base/base";
+@import "./asstes/scss/base/typography";
+@import "./asstes/scss/base/utilities";
+
+
+// @import "./assets/scss/components/modal";
+@import "asstes/scss/components/modal";
+
+// LAYOUTS
+@import "asstes/scss/layouts/home";
+@import "asstes/scss/layouts/sidebar";
+@import "asstes/scss/layouts/header";
+@import "asstes/scss/layouts/about";
+
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

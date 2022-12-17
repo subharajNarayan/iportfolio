@@ -1,0 +1,44 @@
+.yellow {
+  .react-tabs {
+    padding: 10px 0px;
+
+    .home {
+      font-size: 20px;
+      position: relative;
+      height: 490px;
+      min-height: 20px;
+      .color-block{
+        position: absolute;
+        height: 200%;
+        width: 100%;
+        transform: rotate(-15deg);
+        left: -83%;
+        top: -50%;
+        background-color: #ffb400;
+      }
+      &-details{
+        text-align: start;
+        &-text{
+          padding-left: 60px;
+        }
+        &-resume{
+          padding-left: 60px;
+          margin-top: 20px;
+          .btn-primary{
+            border-radius: 25px;
+            box-shadow: 0px 10px 20px 5px rgba(251, 161, 40, 0.42);
+            outline: none;
+            border: none;
+            background-color: #ffb400;
+            &:active{
+              box-shadow: 0px 10px 20px 5px rgba(251, 161, 40, 0.42);
+            }
+            &:hover{
+              background-color: #d69100;
+            }
+          }
+        }
+      }
+    }
+  }
+}

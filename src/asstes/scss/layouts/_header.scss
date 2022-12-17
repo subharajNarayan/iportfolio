@@ -1,0 +1,59 @@
+.tab-panel_list {
+  .home {
+    &-details-container {
+      margin-right: 0px !important;
+
+      .bg {
+        background-image: url('../../images/subharaj.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        height: calc(80vh - 65px);
+        z-index: 11;
+        border-radius: 30px;
+        left: 60px;
+        top: 32px;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.9);
+      }
+    }
+
+    &-details {
+      &-uppertext {
+        max-width: 650px;
+        margin: 0 auto;
+
+        h2 {
+          font-size: 40px;
+          line-height: 62px;
+          font-weight: 700;
+          margin: 18px 0 10px;
+          position: relative;
+          padding-left: 60px;
+          color: #ffb400;
+
+          span {
+            font-size: 28px;
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 29px;
+            height: 4px;
+            width: 40px;
+            border-radius: 10px;
+            background-color: #ffb400;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
+@media only screen and (max-width:767px){
+  
+}
