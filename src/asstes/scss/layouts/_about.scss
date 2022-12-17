@@ -24,18 +24,30 @@
     &-heading {
       text-transform: uppercase;
       text-align: center;
-      h1{
+      width: 100%;
+      text-align: center;
+      margin: 0px auto 30px 6px;
+      border-bottom: 1px solid #e4e4e4;
+      height: 30px;
+
+      h1 {
         font-weight: 700;
         font-size: 48px;
-        span{
-          background: linear-gradient(to right, #ffb400 0%, #ef4444 50%, #1e293b 100%);
-          // background: -webkit-linear-gradient(#ffb400,#ef4444, #1e293b);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+
+        strong {
+          background: #111;
+          padding: 0px 25px;
+
+          span {
+            background: linear-gradient(to right, #ffb400 0%, #ef4444 50%, #1e293b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
       }
     }
-    &-uppertext{
+
+    &-uppertext {
       margin-top: 30px;
       font-size: 22px;
     }
@@ -61,22 +73,112 @@
       padding-left: 60px;
     }
 
-    // &-resume{
-    //   padding-left: 60px;
-    //   margin-top: 20px;
-    //   .btn-primary{
-    //     border-radius: 25px;
-    //     box-shadow: 0px 10px 20px 5px rgba(251, 161, 40, 0.42);
-    //     outline: none;
-    //     border: none;
-    //     background-color: #ffb400;
-    //     &:active{
-    //       box-shadow: 0px 10px 20px 5px rgba(251, 161, 40, 0.42);
-    //     }
-    //     &:hover{
-    //       background-color: #d69100;
-    //     }
-    //   }
-    // }
+    &-bottom {
+      align-items: center;
+    }
+
+    &-resume {
+      padding-left: 5px;
+      // margin-top: 20px;
+
+      .btn-primary {
+        border-radius: 25px;
+        box-shadow: 0px 10px 20px 5px rgba(251, 161, 40, 0.42);
+        outline: none;
+        border: none;
+        background-color: #ffb400;
+
+        &:active {
+          box-shadow: 0px 10px 20px 5px rgba(251, 161, 40, 0.42);
+          background: linear-gradient(to right, #ffb400 0%, #ef4444 50%, #1e293b 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &:hover {
+          background-color: #d69100;
+        }
+      }
+    }
+
+    &-social-media {
+      margin-left: 100px;
+      ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0rem !important;
+
+        li {
+          // padding: 0 20px;
+
+          a {
+            display: flex;
+            position: relative;
+            width: 96px;
+            height: 100px;
+            border-radius: 23px;
+            // margin-right: 50px;
+            font-size: 25px;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.7);
+            z-index: 5;
+            transition: 0.3s;
+
+            &::after {
+              content: "";
+              position: absolute;
+              left: 26px;
+              top: 26px;
+              width: 46px;
+              height: 46px;
+              border-radius: 10px;
+              border: 2px solid rgba(255, 255, 255, 0.2);
+              background: rgba(255, 255, 255, 0.4);
+              -webkit-backdrop-filter: blur(5px);
+              z-index: -1;
+              transition: 0.3s;
+            }
+
+            &:hover {
+              transform: rotate(-15deg);
+
+              &::before {
+                transform: rotate(15deg);
+              }
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 46px;
+              height: 46px;
+              background: #dc2743;
+              right: 25px;
+              // bottom: 0;
+              border-radius: 10px;
+              z-index: -1;
+              transform-origin: 100% 100%;
+              transform: rotate(10deg);
+              transition: 0.3s;
+            }
+          }
+
+          &:nth-child(2) {
+            a::before {
+              background: #25D366;
+            }
+          }
+
+          &:nth-child(3) {
+            a::before {
+              background: #1DA1F2;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -8,9 +8,9 @@ const About = () => {
           <div className='color-block d-none d-lg-block'></div>
           <div className='col-lg-8 col-12 offset-lg-3 about-details text-lg-start'>
             <div className='about-details-heading'>
-              <h1> Ab<span>out </span>Me</h1>
+              <h1> <strong> A<span>bou</span>t <span> Me </span> </strong></h1>
             </div>
-            <div className='about-details-uppertext'>
+            <div className='about-details-uppertext mb-4'>
               <span>
                 Hello! My name is Subharaj Narayan Chaudhary and
                 I enjoy creating things that live on the internet,
@@ -19,10 +19,28 @@ const About = () => {
                 I always have a keen eye for aesthetics to create a beautiful product.
                 <br />
                 <br />
-                My goal is to build applications that are scalable and 
-                efficient under the hood while providing engaging, 
+                My goal is to build applications that are scalable and
+                efficient under the hood while providing engaging,
                 pixel-perfect user experiences.
               </span>
+            </div>
+            <div className='about-details-bottom d-flex'>
+              <div className='about-details-resume'>
+                <button className='btn btn-primary'>My Resume</button>
+              </div>
+              <div className='about-details-social-media'>
+                <ul>
+                  <li>
+                    <a href="#"><i className='fab fa-instagram instagram'></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i className="fab fa-whatsapp whatsapp"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i className='fab fa-facebook facebook'></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

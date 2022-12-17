@@ -7,7 +7,8 @@
       position: relative;
       height: 490px;
       min-height: 20px;
-      .color-block{
+
+      .color-block {
         position: absolute;
         height: 200%;
         width: 100%;
@@ -16,24 +17,33 @@
         top: -50%;
         background-color: #ffb400;
       }
-      &-details{
+
+      &-details {
         text-align: start;
-        &-text{
+
+        &-text {
           padding-left: 60px;
         }
-        &-resume{
+
+        &-resume {
           padding-left: 60px;
           margin-top: 20px;
-          .btn-primary{
+
+          .btn-primary {
             border-radius: 25px;
             box-shadow: 0px 10px 20px 5px rgba(251, 161, 40, 0.42);
             outline: none;
             border: none;
             background-color: #ffb400;
-            &:active{
+
+            &:active {
               box-shadow: 0px 10px 20px 5px rgba(251, 161, 40, 0.42);
+              background: linear-gradient(to right, #ffb400 0%, #ef4444 50%, #1e293b 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
             }
-            &:hover{
+
+            &:hover {
               background-color: #d69100;
             }
           }
