@@ -156,8 +156,8 @@
               width: 46px;
               height: 46px;
               // background: #dc2743;
-              background: linear-gradient(45DEG, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-
+              background: #1DA1F2;
+              
               right: 25px;
               // bottom: 0;
               border-radius: 10px;
@@ -170,7 +170,7 @@
 
           &:nth-child(2) {
             a::before {
-              background: #25D366;
+              background: linear-gradient(45DEG, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
             }
           }
 

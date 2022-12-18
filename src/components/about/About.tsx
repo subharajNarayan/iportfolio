@@ -31,10 +31,10 @@ const About = () => {
               <div className='about-details-social-media'>
                 <ul>
                   <li>
-                    <a href="#"><i className='fab fa-instagram instagram'></i></a>
+                    <a href="#"><i className="fab fa-linkedin linkedin"></i></a>
                   </li>
                   <li>
-                    <a href="#"><i className="fab fa-whatsapp whatsapp"></i></a>
+                    <a href="#"><i className='fab fa-instagram instagram'></i></a>
                   </li>
                   <li>
                     <a href="#"><i className='fab fa-facebook facebook'></i></a>
