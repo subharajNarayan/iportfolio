@@ -155,7 +155,9 @@
               position: absolute;
               width: 46px;
               height: 46px;
-              background: #dc2743;
+              // background: #dc2743;
+              background: linear-gradient(45DEG, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+
               right: 25px;
               // bottom: 0;
               border-radius: 10px;
