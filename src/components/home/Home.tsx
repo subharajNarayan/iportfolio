@@ -1,5 +1,6 @@
 import React from 'react';
 import About from '../about/About';
+import Contact from '../contact/Contact';
 import Header from '../header/Header';
 import Sidebar from '../sidebar/RightSidebar';
 
@@ -43,8 +44,11 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className='about-section'>
+            <div className='about-section' style={{minHeight: "590px"}}>
               <About />
+            </div>
+            <div className='contact-section'>
+              <Contact />
             </div>
           </div>
         </div>
