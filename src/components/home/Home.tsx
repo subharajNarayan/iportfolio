@@ -3,8 +3,19 @@ import About from '../about/About';
 import Contact from '../contact/Contact';
 import Header from '../header/Header';
 import Sidebar from '../sidebar/RightSidebar';
+import Technology from '../technology/Technology';
 
 const Home = () => {
+
+  const [isVisible, setVisible] = React.useState(false);
+  const domRef = React.useRef<any>();
+  
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+  }, []);
 
   return (
     <>
@@ -15,10 +26,12 @@ const Home = () => {
           <Sidebar />
 
           <div className='tab-panel_list'>
-            <div className="home react-tabs__tab-panel--selected">
+            <div className='color-block d-none d-lg-block'></div>
+            <div className={`home react-tabs__tab-panel--selected fadein-section ${isVisible ? 'is-visible' : ''}`}
+            ref={domRef}>
+              {/* <div className='home react-tabs__tab-panel--selected' > */}
               <div className='container-fluid main-container container-home p-0 g-0 aos-init aos-animate'>
                 <div className='row home-details-container d-flex align-item-center'>
-                  <div className='color-block d-none d-lg-block'></div>
                   <div className='col-lg-3 bg position-absolute d-none d-lg-block'>
                   </div>
                   <div className='col-lg-8 col-12 offset-lg-4 home-details text-lg-start'>
@@ -46,6 +59,9 @@ const Home = () => {
             </div>
             <div className='about-section' style={{minHeight: "590px"}}>
               <About />
+            </div>
+            <div className='technology-section'>
+              <Technology />
             </div>
             <div className='contact-section'>
               <Contact />

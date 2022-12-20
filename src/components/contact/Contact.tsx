@@ -3,11 +3,25 @@ import React from 'react'
 type Props = {}
 
 const Contact = (props: Props) => {
+
+  const [isVisible, setVisible] = React.useState(false);
+  const domRef = React.useRef<any>();
+  
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+  }, []);
+
   return (
     <div className="contact react-tabs__tab-panel--selected">
-      <div className='container-fluid main-container container p-0 g-0 aos-init aos-animate'>
+      <div className={`container-fluid main-container container p-0 g-0 aos-init aos-animate fade-in-section ${isVisible ? 'is-visible' : ''}`}
+            ref={domRef}>
+              {/* <div className='container-fluid main-container container p-0 g-0 aos-init aos-animate'> */}
         <div className='contact-details-heading'>
           <h1> <strong> Get <span>in</span> Touch </strong></h1>
+          <span className='title-bg'>Contact</span>
         </div>
         <div className='row contact-details-container d-flex align-item-center'>
           <div className='col-lg-5 col-12 contact-details-leftsidebar'>
@@ -48,13 +62,15 @@ const Contact = (props: Props) => {
             <form>
               <div className='row contact-form-info'>
                 <div className='col-lg-6'>
-                  <div className='form-group'>
-                    <input type="text" className='form-control' placeholder='Name' />
+                  <div className='form-group name'>
+                    <label htmlFor="">Name</label>
+                    <input type="text" className='form-control' />
                   </div>
                 </div>
                 <div className='col-lg-6'>
-                  <div className='form-group'>
-                    <input type="text" className='form-control' placeholder='Email' />
+                  <div className='form-group email'>
+                    <label htmlFor="">Email</label>
+                    <input type="text" className='form-control' />
                   </div>
                 </div>
               </div>

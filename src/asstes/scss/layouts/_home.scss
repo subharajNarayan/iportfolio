@@ -8,16 +8,6 @@
       height: 490px;
       min-height: 20px;
 
-      .color-block {
-        position: absolute;
-        height: 200%;
-        width: 100%;
-        transform: rotate(-15deg);
-        left: -83%;
-        top: -50%;
-        background-color: #ffb400;
-      }
-
       &-details {
         text-align: start;
 
@@ -51,4 +41,21 @@
       }
     }
   }
+}
+
+.color-block {
+  position: absolute;
+  height: 92%;
+  width: 99%;
+  transform: rotate(-15deg);
+  left: -91.2%;
+  top: -54%;
+  background-color: #ffb400;
+  // position: absolute;
+  // height: 93.7%;
+  // width: 99.6%;
+  // transform: rotate(-15deg);
+  // left: -90.4%;
+  // top: -51.9%;
+  // background-color: #ffb400;
 }
