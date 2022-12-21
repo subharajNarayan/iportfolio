@@ -23,7 +23,8 @@ const Contact = (props: Props) => {
           <h1> <strong> Get <span>in</span> Touch </strong></h1>
           <span className='title-bg'>Contact</span>
         </div>
-        <div className='row contact-details-container d-flex align-item-center'>
+        <div className={`row contact-details-container d-flex align-item-center fade-in-section ${isVisible ? 'is-visible' : ''}`}
+            ref={domRef}>
           <div className='col-lg-5 col-12 contact-details-leftsidebar'>
             <h3 className='pb-3'>Don't be Shy</h3>
             <p>Feel free to get in touch with me. I am always open to discussing new projects,
@@ -63,19 +64,22 @@ const Contact = (props: Props) => {
               <div className='row contact-form-info'>
                 <div className='col-lg-6'>
                   <div className='form-group name'>
-                    <label htmlFor="">Name</label>
-                    <input type="text" className='form-control' />
+                    {/* <label htmlFor="">Name</label> */}
+                    <input type="text" className='form-control' placeholder='Name'/>
                   </div>
                 </div>
                 <div className='col-lg-6'>
                   <div className='form-group email'>
-                    <label htmlFor="">Email</label>
-                    <input type="text" className='form-control' />
+                    {/* <label htmlFor="">Email</label> */}
+                    <input type="text" className='form-control' placeholder='Email'/>
                   </div>
                 </div>
               </div>
               <div className='form-group contact-form-message'>
                 <textarea name="message" id="message" cols={20} rows={5} className="form-control" placeholder='Message'></textarea>
+              </div>
+              <div className='contact-form-button'>
+                <button type='submit' className='btn btn-outline-primary'>Submit</button>
               </div>
             </form>
           </div>

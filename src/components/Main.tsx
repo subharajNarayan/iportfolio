@@ -6,8 +6,8 @@ import Home from './home/Home';
 const Main = () => {
   return (
     <Routes>
-      <Route path="/" element={ <Home /> } />
-      <Route path="/about-me/" element={ <About /> } />
+      {/* <Route path="/" element={ <Home /> } /> */}
+      {/* <Route path="/about-me/" element={ <About /> } /> */}
     </Routes>
   )
 }

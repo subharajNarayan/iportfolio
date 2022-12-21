@@ -13,13 +13,13 @@ const About = () => {
   }, []);
 
   return (
-    <div className="about react-tabs__tab-panel--selected">
+    <div className="about react-tabs__tab-panel--selected" id='about-content'>
       <div className='container-fluid main-container container-about p-0 g-0 aos-init aos-animate'>
         <div className='row about-details-container d-flex align-item-center'>
           <div className='color-block d-none d-lg-block'></div>
           <div className={`col-lg-8 col-12 offset-lg-3 about-details text-lg-start fade-in-section ${isVisible ? 'is-visible' : ''}`}
             ref={domRef}>
-              {/* <div className='col-lg-8 col-12 offset-lg-3 about-details text-lg-start' > */}
+            {/* <div className='col-lg-8 col-12 offset-lg-3 about-details text-lg-start' > */}
             <div className='about-details-heading'>
               <h1> <strong> A<span>bou</span>t <span> Me </span> </strong></h1>
             </div>
@@ -37,7 +37,9 @@ const About = () => {
                 pixel-perfect user experiences.
               </span>
             </div>
-            <div className='about-details-bottom d-flex'>
+            {/* <div className='about-details-bottom d-flex'> */}
+            <div className={`about-details-bottom d-flex fade-in-section ${isVisible ? 'is-visible' : ''}`}
+              ref={domRef}>
               <div className='about-details-resume'>
                 <button className='btn btn-primary'>My Resume</button>
               </div>

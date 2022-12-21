@@ -11,7 +11,11 @@
       h1 {
         font-weight: 700;
         font-size: 48px;
-
+        strong{
+          background: linear-gradient(to right, #ffb400 0%, #ef4444 50%, #1e293b 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
         span {
           font-size: 42px;
         }

@@ -1,9 +1,11 @@
 import React from 'react';
 import Hamburger from 'hamburger-react';
-// import logo from '../../asstes/images/logo.png';
+import { Link } from 'react-router-dom';
+// import {Link} from 'react-scroll';
 
 const Sidebar = () => {
   const [isActive, setIsActive] = React.useState(false);
+
   return (
     <section className='sidebar d-none d-lg-block'>
       <div className='sidebar-menu'>
@@ -15,29 +17,28 @@ const Sidebar = () => {
         <div className='sidebar-nav'>
           <ul className=" icon-menu revealator-slideup revealator-once revealator-delay1">
             <li className="icon-box ">
-              <a href="/">
-                {/* <i className="fa fa-user"></i> */}
+              <Link  to="#home" >
                 <i className="fas fa-home"></i>
                 <h2>Home</h2>
-              </a>
+              </Link>
             </li>
             <li className="icon-box ">
-              <a href="">
+                <Link to="">
                 <i className='fas fa-user'></i>
                 <h2>About</h2>
-              </a>
+                </Link>
             </li>
             <li className="icon-box ">
-              <a href="">
+              <Link to="#">
                 <i className="fas fa-briefcase"></i>
                 <h2>Portfolio</h2>
-              </a>
+              </Link>
             </li>
             <li className="icon-box ">
-              <a href="">
-              <i className="fas fa-envelope-open"></i>
+              <Link to="contact-content">
+                <i className="fas fa-envelope-open"></i>
                 <h2>Contact</h2>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

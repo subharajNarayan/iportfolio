@@ -4,6 +4,8 @@ import Contact from '../contact/Contact';
 import Header from '../header/Header';
 import Sidebar from '../sidebar/RightSidebar';
 import Technology from '../technology/Technology';
+import { Link } from 'react-router-dom';
+import Experiences from '../experiences/Experiences';
 
 const Home = () => {
 
@@ -27,7 +29,7 @@ const Home = () => {
 
           <div className='tab-panel_list'>
             <div className='color-block d-none d-lg-block'></div>
-            <div className={`home react-tabs__tab-panel--selected fadein-section ${isVisible ? 'is-visible' : ''}`}
+            <div id='home' className={`home react-tabs__tab-panel--selected fadein-section ${isVisible ? 'is-visible' : ''}`}
             ref={domRef}>
               {/* <div className='home react-tabs__tab-panel--selected' > */}
               <div className='container-fluid main-container container-home p-0 g-0 aos-init aos-animate'>
@@ -42,28 +44,33 @@ const Home = () => {
                           Subharaj Narayan Chaudhary
                         </span>
                       </h2>
-                      <div className='home-details-language'>
-
+                      <div className='home-details-language pb-3'>
+                        <h4>I am a <span>Frontend React</span> Developer</h4>
                       </div>
                       <div className='home-details-text'>
                         <p>I'm a Tunisian based web designer & front‑end developer focused on crafting clean & user‑friendly experiences,
                           I am passionate about building excellent software that improves the lives of those around me.</p>
                       </div>
                       <div className='home-details-resume'>
+                        <Link to="contact-content">
                         <button className='btn btn-primary'>Get In Touch</button>
+                        </Link>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className='about-section' style={{minHeight: "590px"}}>
+            <div className='about-section' id='about-content' style={{minHeight: "590px"}}>
               <About />
             </div>
-            <div className='technology-section'>
+            <div className='technology-section' id='technology-content'>
               <Technology />
             </div>
-            <div className='contact-section'>
+            <div className='experience-section' id='experience-content'>
+              <Experiences />
+            </div>
+            <div className='contact-section' id='contact-content'>
               <Contact />
             </div>
           </div>

@@ -24,7 +24,7 @@
 
         h2 {
           font-size: 40px;
-          line-height: 62px;
+          // line-height: 62px;
           font-weight: 700;
           margin: 18px 0 10px;
           position: relative;
@@ -44,6 +44,16 @@
             width: 40px;
             border-radius: 10px;
             background-color: #ffb400;
+          }
+        }
+      }
+      &-language{
+        padding-left: 60px ;
+        h4{
+          span{
+            background: linear-gradient(to right, #ffb400 0%, #ef4444 50%, #1e293b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
         }
       }
