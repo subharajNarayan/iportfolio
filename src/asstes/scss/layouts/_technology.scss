@@ -122,3 +122,22 @@
   background-color: #0071cb !important;
   width: 100%;
 }
+
+
+@media only screen and (max-width:767px){
+
+  .technology{
+    &-details{
+      &-tabhead{
+        li{
+          padding: 0rem;
+        }
+      }
+      &-tabcontent{
+        .tab-pane {
+          width: auto;
+        }
+      }
+    }
+  }
+}

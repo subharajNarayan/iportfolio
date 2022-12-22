@@ -61,16 +61,17 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className='about-section' id='about-content' style={{minHeight: "590px"}}>
+            <div className='about-section mb-5' id='about-content' >
+            {/* style={{minHeight: "590px"}} */}
               <About />
             </div>
-            <div className='technology-section' id='technology-content'>
+            <div className='technology-section mb-5 mt-5' id='technology-content'>
               <Technology />
             </div>
-            <div className='experience-section' id='experience-content'>
+            <div className='experience-section mt-5 mb-5' id='experience-content'>
               <Experiences />
             </div>
-            <div className='contact-section' id='contact-content'>
+            <div className='contact-section mt-5 mb-5' id='contact-content'>
               <Contact />
             </div>
           </div>
