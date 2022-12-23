@@ -1,11 +1,12 @@
 import React from 'react';
 import About from '../about/About';
 import Contact from '../contact/Contact';
-import Header from '../header/Header';
+// import Header from '../header/Header';
 import Sidebar from '../sidebar/RightSidebar';
 import Technology from '../technology/Technology';
 import { Link } from 'react-router-dom';
 import Experiences from '../experiences/Experiences';
+import Footer from '../footer/Footer';
 
 const Home = () => {
 
@@ -23,7 +24,7 @@ const Home = () => {
     <>
       <div className='yellow'>
         <div className='react-tabs'>
-          <Header />
+          {/* <Header /> */}
 
           <Sidebar />
 
@@ -73,6 +74,9 @@ const Home = () => {
             </div>
             <div className='contact-section mt-5 mb-5' id='contact-content'>
               <Contact />
+            </div>
+            <div className='footer-section mt-5 mb-2' id='footer-content'>
+              <Footer />
             </div>
           </div>
         </div>

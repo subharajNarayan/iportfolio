@@ -16,7 +16,7 @@ const Contact = (props: Props) => {
 
   return (
     <div className="contact react-tabs__tab-panel--selected">
-      <div className={`container-fluid main-container container p-0 g-0 aos-init aos-animate fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      <div className={`container-fluid main-container container g-0 aos-init aos-animate fade-in-section ${isVisible ? 'is-visible' : ''}`}
             ref={domRef}>
               {/* <div className='container-fluid main-container container p-0 g-0 aos-init aos-animate'> */}
         <div className='contact-details-heading'>
@@ -44,7 +44,7 @@ const Contact = (props: Props) => {
                     Mail Me
                   </span>
                   <a href="mailto:subharazzchy68@gmail.com">
-                    <strong>subharazzchy68@gmail.com</strong>
+                    <strong style={{marginLeft:"5px"}}>subharazzchy68@gmail.com</strong>
                   </a>
                 </li>
                 <li className='pt-5'>

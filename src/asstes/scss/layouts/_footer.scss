@@ -1,0 +1,61 @@
+.footer{
+  &-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-content{
+      .social-media{
+        .nav{
+          .nav-item{
+            padding: .78rem;
+            .nav-link{
+              padding: 0.5rem 0!important;
+              i{
+                transition: transform 0.4s;
+              &:hover{
+                transform: scale(1.1);
+              }
+              }
+              .skype{
+                color: #fff;
+                &:hover{
+                  color: #1da1f2;
+                }
+              }
+              .github{
+                color: #fff;
+                &:hover{
+                  color: #6a737d;
+                }
+              }
+              .linkedin{
+                color: #fff;
+                &:hover{
+                  color: #0072B1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 767px){
+  .footer{
+    &-details{
+      display: block;
+      &-profile{
+        text-align: center;
+      }
+      &-content{
+        .social-media{
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

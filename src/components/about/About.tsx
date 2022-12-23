@@ -1,4 +1,5 @@
 import React from 'react';
+import { Nav,NavItem, NavLink } from 'reactstrap';
 
 const About = () => {
 
@@ -12,9 +13,14 @@ const About = () => {
     observer.observe(domRef.current);
   }, []);
 
+  const openInNewTab = (url:any) => {
+    // 👇️ setting target to _blank with window.open
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="about react-tabs__tab-panel--selected" id='about-content'>
-      <div className='container-fluid main-container container-about p-0 g-0 aos-init aos-animate'>
+      <div className='container-fluid main-container container-about g-0 aos-init aos-animate'>
         <div className='row about-details-container d-flex align-item-center'>
           <div className='color-block d-none d-lg-block'></div>
           <div className={`col-lg-8 col-12 offset-lg-3 about-details text-lg-start fade-in-section ${isVisible ? 'is-visible' : ''}`}
@@ -44,20 +50,28 @@ const About = () => {
                 <button className='btn btn-primary'>My Resume</button>
               </div>
               <div className='about-details-social-media'>
-                <ul>
-                  <li>
-                    <a href="https://www.linkedin.com/in/subharaj-narayan-chaudhary-3332b8237/" target="_blank"><i className="fab fa-linkedin linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/subharajNarayan" target="_blank"><i className="fab fa-github github"></i></a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/subharaj_chaudhary/" target="_blank"><i className='fab fa-instagram instagram'></i></a>
-                  </li>
-                  <li>
-                    <a href="https://join.skype.com/invite/rs1Z9DCbpfDP" target="_blank"><i className='fab fa-skype skype'></i></a>
-                  </li>
-                </ul>
+                <Nav>
+                  <NavItem>
+                    <NavLink onClick={() => openInNewTab('https://www.linkedin.com/in/subharaj-narayan-chaudhary-3332b8237/')}>
+                      <i className="fab fa-linkedin linkedin "></i>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink onClick={() => openInNewTab('https://github.com/subharajNarayan')}>
+                      <i className="fab fa-github github "></i>
+                      </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink onClick={() => openInNewTab('https://www.instagram.com/subharaj_chaudhary/')}>
+                      <i className='fab fa-instagram instagram'></i>
+                      </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink  onClick={() => openInNewTab('https://join.skype.com/invite/rs1Z9DCbpfDP')}>
+                      <i className='fab fa-skype skype'></i>
+                      </NavLink>
+                  </NavItem>
+                </Nav>
               </div>
             </div>
           </div>
