@@ -75,7 +75,7 @@ const Home = () => {
             <div className='contact-section mt-5 mb-5' id='contact-content'>
               <Contact />
             </div>
-            <div className='footer-section mt-5 mb-2' id='footer-content'>
+            <div className='footer-section mt-5' id='footer-content'>
               <Footer />
             </div>
           </div>

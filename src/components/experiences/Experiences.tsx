@@ -1,4 +1,5 @@
 import React from 'react'
+import { Nav, NavItem } from 'reactstrap';
 
 type Props = {}
 
@@ -23,12 +24,44 @@ const Experiences = (props: Props) => {
         </div>
         <div className={`row p-5 container experience-details-container fade-in-section ${isVisible ? 'is-visible' : ''}`}
             ref={domRef}>
-          <div className="col-lg-3 col-12 experience-details-company text-lg-start d-flex">
+          <div className="col-lg-3 col-12 experience-details-company text-lg-start d-flex mt-4">
             <h4><strong> SmartTech </strong>Solution PVT.LTD</h4>
           </div>
 
-          <div className='col-lg-9 col-12 '>
-              Solutions
+          <div className='col-lg-9 col-12 p-4 '>
+            <div className='experience-details-professional pt-1'>
+              <div className='flex flex-col w-full experience-details-specialist'>
+                <h5 className='text-xl'>Frontend React Developer</h5>
+                <p>March 2022 - Present</p>
+              </div>
+              <div className='flex experience-details-projects'>
+                <Nav>
+                  <NavItem>
+                    <h6>Asset Management System</h6>
+                    <p>The asset management tools comprising a web dashboard, 
+                      a configuration panel and a mobile app are developed to support the management of 
+                      assets and making asset management plans for water systems.</p>
+                      <Nav>
+                        <NavItem>
+                          <span>React</span>
+                        </NavItem>
+                        <span>•</span>
+                        <NavItem>
+                          <span>React</span>
+                        </NavItem>
+                        <span>•</span>
+                        <NavItem>
+                          <span>React</span>
+                        </NavItem>
+                        <span>•</span>
+                        <NavItem>
+                          <span>React</span>
+                        </NavItem>
+                      </Nav>
+                  </NavItem>
+                </Nav>
+              </div>
+            </div>
           </div>
         </div>
       </div>

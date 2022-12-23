@@ -13,9 +13,43 @@
       }
     }
     &-company{
-      &strong{
-        display: block;
+      text-align: end;
+      h4{
+        font-weight: 600;
+        strong{
+          display: block;
+          color: #ffb400;
+        }
       }
     }
+      &-specialist{
+        h5{
+          color:#10C296;
+        }
+        p{
+          line-height: 1.25rem;
+          font-weight: 600;
+        }
+      }
+      &-projects{
+        margin-top: 1.2rem;
+        margin-left: .7rem;
+        ul{
+          li{
+            list-style: disc;
+            h6{
+              font-weight: 600;
+            }
+            p{
+              font-size: .81rem;
+            }
+            ul{
+              li{
+                list-style: none;
+              }
+            }
+          }
+        }
+      }
   }
 }
