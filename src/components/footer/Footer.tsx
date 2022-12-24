@@ -45,7 +45,7 @@ const footer = (props: Props) => {
         </div>
       </div>
       <div className='footer-details-reserved'>
-        <span className="text-sm text-neutral-700 md:text-[15px] font-bold">© 2022 Subharaj Narayan Chaudhary. All right reserved</span>
+        <span className="text-sm text-neutral-700 font-bold">© 2022 Subharaj Narayan Chaudhary. <span className='right-reserved'>All right reserved</span></span>
       </div>
     </div>
   )

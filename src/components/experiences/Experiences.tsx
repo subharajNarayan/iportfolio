@@ -28,8 +28,8 @@ const Experiences = (props: Props) => {
             <h4><strong> SmartTech </strong>Solution PVT.LTD</h4>
           </div>
 
-          <div className='col-lg-9 col-12 p-4 '>
-            <div className='experience-details-professional pt-1'>
+          <div className='col-lg-9 col-12 p-4 experience-details-professional'>
+            <div className=' pt-1'>
               <div className='flex flex-col w-full experience-details-specialist'>
                 <h5 className='text-xl'>Frontend React Developer</h5>
                 <p>March 2022 - Present</p>
@@ -38,9 +38,9 @@ const Experiences = (props: Props) => {
                 <Nav>
                   <NavItem>
                     <h6>Asset Management System</h6>
-                    <p>The asset management tools comprising a web dashboard, 
+                    <span>The asset management tools comprising a web dashboard, 
                       a configuration panel and a mobile app are developed to support the management of 
-                      assets and making asset management plans for water systems.</p>
+                      assets and making asset management plans for water systems.</span>
                       <Nav>
                         <NavItem>
                           <span>React</span>

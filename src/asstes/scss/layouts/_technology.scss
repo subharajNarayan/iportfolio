@@ -1,4 +1,11 @@
+#technology-content{
+    margin-top: 8rem;
+  }
+
 .technology {
+  &-content{
+    margin-top: 7rem;
+  }
   &-details {
     &-container {
       justify-content: center;
@@ -96,6 +103,10 @@
 
 @media only screen and (max-width:767px){
 
+  #technology-content {
+    margin-top: 5rem;
+  }
+  
   .technology{
     &-details{
       &-tabhead{
@@ -106,6 +117,13 @@
       &-tabcontent{
         .tab-pane {
           width: auto;
+        }
+        .react{
+          &-ul{
+            display: flex;
+            justify-content: center;
+            margin-left: 0px!important;
+          }
         }
       }
     }

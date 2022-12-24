@@ -66,16 +66,16 @@ const Home = () => {
             {/* style={{minHeight: "590px"}} */}
               <About />
             </div>
-            <div className='technology-section mb-5 mt-5' id='technology-content'>
+            <div className='technology-section mb-5' id='technology-content'>
               <Technology />
             </div>
-            <div className='experience-section mt-5 mb-5' id='experience-content'>
+            <div className='experience-section mb-5' id='experience-content'>
               <Experiences />
             </div>
-            <div className='contact-section mt-5 mb-5' id='contact-content'>
+            <div className='contact-section mb-5' id='contact-content'>
               <Contact />
             </div>
-            <div className='footer-section mt-5' id='footer-content'>
+            <div className='footer-section' id='footer-content'>
               <Footer />
             </div>
           </div>
