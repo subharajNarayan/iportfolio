@@ -4,15 +4,15 @@
       margin-right: 0px !important;
 
       .bg {
-        background-image: url('../../images/subharaj.jpg');
+        background-image: url(http://localhost:3000/static/media/subharaj.fc6d8484420fe68d3caf.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
-        height: calc(80vh - 65px);
-        z-index: 11;
+        height: calc(75vh - 50px);
+        z-index: 999;
         border-radius: 30px;
-        left: 60px;
-        top: 32px;
+        left: 70px;
+        top: 25px;
         box-shadow: 0 0 7px rgba(0, 0, 0, 0.9);
       }
     }
