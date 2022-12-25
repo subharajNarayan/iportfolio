@@ -1,84 +1,104 @@
-#experience-content{
+#experience-content {
+  margin-top: 8rem;
+}
+
+.experience {
+  &-content {
     margin-top: 8rem;
   }
 
-.experience{
-  &-content{
-    margin-top: 8rem;
-  }
-  &-details{
-    &-heading{
+  &-details {
+    &-heading {
       text-align: center;
-      h1{
+
+      h1 {
         font-weight: 700;
         font-size: 48px;
-        strong{
+
+        strong {
           background: linear-gradient(to right, #ffb400 0%, #ef4444 50%, #1e293b 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
       }
     }
-    &-company{
+
+    &-company {
       text-align: end;
-      h4{
+
+      h4 {
         font-weight: 600;
-        strong{
+
+        strong {
           display: block;
           color: #ffb400;
         }
       }
     }
-      &-specialist{
-        h5{
-          color:#10C296;
-        }
-        p{
-          line-height: 1.25rem;
-          font-weight: 600;
-        }
+
+    &-specialist {
+      h5 {
+        color: #10C296;
       }
-      &-projects{
-        margin-top: 1.2rem;
-        margin-left: .7rem;
-        ul{
-          li{
-            list-style: disc;
-            h6{
-              font-weight: 600;
+
+      p {
+        line-height: 1.25rem;
+        font-weight: 600;
+      }
+    }
+
+    &-projects {
+      margin-top: 1.2rem;
+      margin-left: .7rem;
+
+      ul {
+        li {
+          list-style: disc;
+
+          h6 {
+            font-weight: 600;
+          }
+
+          // p{
+          //   font-size: .81rem;
+          // }
+          ul {
+            li {
+              list-style: none;
+              padding: 5px 8px;
+              font-size: .75rem;
             }
-            // p{
-            //   font-size: .81rem;
-            // }
-            ul{
-              li{
-                list-style: none;
-              }
+            .dot{
+              font-size: 19px;
             }
           }
         }
       }
+    }
   }
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px) {
   #experience-content {
     margin-top: 5rem;
   }
-  .experience{
-    &-details{
-      &-container{
-        margin-left: 0px!important;
-        margin-right: 0px!important;
-        padding: 0px!important;
+
+  .experience {
+    &-details {
+      &-container {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        padding: 0px !important;
       }
-      &-company{
+
+      &-company {
         justify-content: center;
         text-align: center;
-        padding-right: 0px!important;
-        padding-left: 0px!important;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
       }
-      &-professional{
+
+      &-professional {
         padding: 1rem 0.5rem !important;
       }
     }

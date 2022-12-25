@@ -35,27 +35,97 @@ const Experiences = (props: Props) => {
                 <p>March 2022 - Present</p>
               </div>
               <div className='flex experience-details-projects'>
-                <Nav>
+                <Nav className='ams mb-3'>
                   <NavItem>
                     <h6>Asset Management System</h6>
                     <span>The asset management tools comprising a web dashboard, 
                       a configuration panel and a mobile app are developed to support the management of 
                       assets and making asset management plans for water systems.</span>
                       <Nav>
-                        <NavItem>
-                          <span>React</span>
+                        <NavItem className='pl-0'>
+                          <span>React Framework</span>
                         </NavItem>
-                        <span>•</span>
+                        <span style={{color: "#3178C6"}} className="dot">•</span>
                         <NavItem>
-                          <span>React</span>
+                          <span >Typescript</span>
                         </NavItem>
-                        <span>•</span>
+                        <span style={{color: "#F1E05A"}} className="dot">•</span>
                         <NavItem>
-                          <span>React</span>
+                          <span>JavaScript</span>
                         </NavItem>
-                        <span>•</span>
+                        <span style={{color: "#C6538C"}} className="dot">•</span>
                         <NavItem>
-                          <span>React</span>
+                          <span>SCSS</span>
+                        </NavItem>
+                        <span style={{color: "#563d7c"}} className="dot">•</span>
+                        <NavItem>
+                          <span>Bootstrap</span>
+                        </NavItem>
+                        <span style={{color: "#E34C26"}} className="dot">•</span>
+                        <NavItem>
+                          <span>HTML</span>
+                        </NavItem>
+                        <span style={{color: "#563D7C"}} className="dot">•</span>
+                        <NavItem>
+                          <span>CSS</span>
+                        </NavItem>
+                        <span style={{color: "#6a737d"}} className="dot">•</span>
+                        <NavItem>
+                          <span>Git</span>
+                        </NavItem>
+                      </Nav>
+                  </NavItem>
+                </Nav>
+                <Nav className='order-sathi mb-3'>
+                  <NavItem>
+                    <h6>Sales for E-commerce (Order-Sathi)</h6>
+                    <span>The asset management tools comprising a web dashboard, 
+                      a configuration panel and a mobile app are developed to support the management of 
+                      assets and making asset management plans for water systems.</span>
+                      <Nav>
+                        <NavItem className='pl-0'>
+                          <span>React Framework</span>
+                        </NavItem>
+                        <span style={{color: "#F1E05A"}} className="dot">•</span>
+                        <NavItem>
+                          <span>JavaScript</span>
+                        </NavItem>
+                        <span style={{color: "#563d7c"}} className="dot">•</span>
+                        <NavItem>
+                          <span>Bootstrap</span>
+                        </NavItem>
+                        <span style={{color: "#E34C26"}} className="dot">•</span>
+                        <NavItem>
+                          <span>HTML</span>
+                        </NavItem>
+                        <span style={{color: "#563D7C"}} className="dot">•</span>
+                        <NavItem>
+                          <span>CSS</span>
+                        </NavItem>
+                        <span style={{color: "#6a737d"}} className="dot">•</span>
+                        <NavItem>
+                          <span>Git</span>
+                        </NavItem>
+                      </Nav>
+                  </NavItem>
+                </Nav>
+                <Nav className='order-sathi mb-3'>
+                  <NavItem>
+                    <h6>Down Syndrome of Association (DSSHA-Nepal)</h6>
+                    <span>The asset management tools comprising a web dashboard, 
+                      a configuration panel and a mobile app are developed to support the management of 
+                      assets and making asset management plans for water systems.</span>
+                      <Nav>
+                        <NavItem className='pl-0'>
+                          <span>WordPress</span>
+                        </NavItem>
+                        <span style={{color: "#563D7C"}} className="dot">•</span>
+                        <NavItem>
+                          <span>CSS</span>
+                        </NavItem>
+                        <span style={{color: "#f29111"}} className="dot">•</span>
+                        <NavItem>
+                          <span>MySQL</span>
                         </NavItem>
                       </Nav>
                   </NavItem>

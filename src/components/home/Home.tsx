@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import Experiences from '../experiences/Experiences';
 import Footer from '../footer/Footer';
 
+import profile from '../../asstes/images/subharaj.jpg';
+
 const Home = () => {
 
   const [isVisible, setVisible] = React.useState(false);
@@ -35,7 +37,9 @@ const Home = () => {
               {/* <div className='home react-tabs__tab-panel--selected' > */}
               <div className='container-fluid main-container container-home p-0 g-0 aos-init aos-animate'>
                 <div className='row home-details-container d-flex align-item-center'>
-                  <div className='col-lg-3 bg position-absolute d-none d-lg-block'>
+                  {/* <div className='col-lg-3 bg position-absolute d-none d-lg-block'> */}
+                  <div className='col-lg-3 bg d-none d-lg-block'>
+                    <img src={profile} alt="Subharaj Narayan Chaudhary" />
                   </div>
                   <div className='col-lg-8 col-12 offset-lg-4 home-details text-lg-start'>
                     <div className='home-details-uppertext'>
