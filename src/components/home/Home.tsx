@@ -35,11 +35,12 @@ const Home = () => {
             <div className='color-block d-none d-lg-block'></div>
             <div id='home' className={`home react-tabs__tab-panel--selected fadein-section ${isVisible ? 'is-visible' : ''}`}
             ref={domRef}>
-              {/* <div className='home react-tabs__tab-panel--selected' > */}
               <div className='container-fluid main-container container-home p-0 g-0 aos-init aos-animate'>
                 <div className='row home-details-container d-flex align-item-center'>
-                  {/* <div className='col-lg-3 bg position-absolute d-none d-lg-block'> */}
                   <div className='col-lg-3 bg d-none d-lg-block'>
+                    <img src={profile} alt="Subharaj Narayan Chaudhary" />
+                  </div>
+                  <div className='col-lg-3 bg d-lg-none d-block'>
                     <img src={profile} alt="Subharaj Narayan Chaudhary" />
                   </div>
                   <div className='col-lg-8 col-12 offset-lg-4 home-details text-lg-start'>

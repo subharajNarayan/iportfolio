@@ -1,36 +1,72 @@
-.projects{
-  &-details{
-    &-container{
+.projects {
+  &-details {
+    &-heading{
+      text-transform: uppercase;
+      text-align: center;
+      h1{
+        strong{
+          background: linear-gradient(to right, #ffb400 0%, #ef4444 50%, #1e293b 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        span {
+          font-size: 32px;
+        }
+      }
+    }
+    &-container {
       justify-content: center;
     }
-    &-company{
-      padding: 0 7px!important;
-      
+    &-company {
+      padding: 0 7px !important;
     }
-    &-image{
+
+    &-image {
       overflow: hidden;
-      img{
+
+      img {
         height: 345px;
         object-fit: cover;
       }
     }
-    &-content{
+
+    &-content {
       position: absolute;
       top: 0;
       padding: 55px 24px;
       transition: transform .3s;
       background-color: #d3d3d3;
-      opacity: 0.5;
+      opacity: 0.7;
       height: 345px;
       color: #000;
-      h2{
+      h2 {
         font-size: 1.3rem;
         text-align: center;
+        color: #000;
       }
-      p{
+      p {
         margin-top: 1rem;
         text-align: justify;
         font-size: 0.75rem;
+        color: #000;
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .projects {
+    &-details {
+      &-container {
+        justify-content: center;
+        padding-right: 1px !important;
+        padding-left: 1px !important;
+        margin: 0px !important;
+      }
+
+      &-company {
+        padding: 0px !important;
       }
     }
   }
