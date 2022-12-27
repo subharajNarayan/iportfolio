@@ -29,6 +29,7 @@
             &:active {
               box-shadow: 0px 10px 20px 5px rgba(251, 161, 40, 0.42);
               background: linear-gradient(to right, #ffb400 0%, #ef4444 50%, #1e293b 100%);
+              // background-clip: to-upper-case($string: "text");
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
             }
@@ -45,10 +46,10 @@
 
 .color-block {
   position: absolute;
-  height: 91.2%;
-  width: 97.94%;
+  height: 85.6%;
+  width: 96%;
   transform: rotate(-15deg);
-  left: -101.4%;
+  left: -106.5%;
   top: -66.89%;
   background-color: #ffb400;
 }

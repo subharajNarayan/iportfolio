@@ -9,6 +9,7 @@ import Experiences from '../experiences/Experiences';
 import Footer from '../footer/Footer';
 
 import profile from '../../asstes/images/subharaj.jpg';
+import Projects from '../projects/Projects';
 
 const Home = () => {
 
@@ -75,6 +76,9 @@ const Home = () => {
             </div>
             <div className='experience-section mb-5' id='experience-content'>
               <Experiences />
+            </div>
+            <div className='projects-section mb-5' id='projects-content'>
+              <Projects />
             </div>
             <div className='contact-section mb-5' id='contact-content'>
               <Contact />

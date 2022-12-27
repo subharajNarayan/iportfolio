@@ -1,0 +1,37 @@
+.projects{
+  &-details{
+    &-container{
+      justify-content: center;
+    }
+    &-company{
+      padding: 0 7px!important;
+      
+    }
+    &-image{
+      overflow: hidden;
+      img{
+        height: 345px;
+        object-fit: cover;
+      }
+    }
+    &-content{
+      position: absolute;
+      top: 0;
+      padding: 55px 24px;
+      transition: transform .3s;
+      background-color: #d3d3d3;
+      opacity: 0.5;
+      height: 345px;
+      color: #000;
+      h2{
+        font-size: 1.3rem;
+        text-align: center;
+      }
+      p{
+        margin-top: 1rem;
+        text-align: justify;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

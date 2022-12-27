@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
 import classnames from 'classnames';
+import { motion } from 'framer-motion';
 
 import redux from '../../../asstes/images/redux.png';
 import html from '../../../asstes/images/html.png';
@@ -105,98 +106,198 @@ const Tabpanel = (props: Props) => {
       <TabContent activeTab={activeTab} className={`technology-details-tabcontent fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>
         <TabPane tabId="1">
           <Nav className='react-ul'>
-            <NavItem className='react-li'>
-              <img src={react} alt="React" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">React</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={redux} alt="Redux" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">Redux</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={jquery} alt="JQuery" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
-              <span className="pt-1">JQuery</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={wordpress} alt="" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">WordPress</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={bootstrap} alt="Bootstrap" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">Bootstrap</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={html} alt="HTML" height="60" width="60"/>
-              <span className="pt-1">Html</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={css} alt="CSS" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">CSS</span>
-            </NavItem>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={react} alt="React" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">React</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={redux} alt="Redux" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Redux</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={jquery} alt="JQuery" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">JQuery</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={wordpress} alt="" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">WordPress</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={bootstrap} alt="Bootstrap" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Bootstrap</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={html} alt="HTML" height="60" width="60" />
+                <span className="pt-1">Html</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={css} alt="CSS" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">CSS</span>
+              </NavItem>
+            </motion.div>
           </Nav>
         </TabPane>
         <TabPane tabId="2">
-        <Nav className='react-ul'>
-            <NavItem className='react-li'>
-              <img src={git} alt="Git" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">Git</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={gitbash} alt="GitBash" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">Git Bash</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={gitlab} alt="Gitlab" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
-              <span className="pt-1">Gitlab</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={github} alt="Github" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">Github</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={netlify} alt="Netlify" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">Netlify</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={npm} alt="npm" height="60" width="60"/>
-              <span className="pt-1">npm</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={yarn} alt="yarn" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">yarn</span>
-            </NavItem>
+          <Nav className='react-ul'>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={git} alt="Git" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Git</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={gitbash} alt="GitBash" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Git Bash</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={gitlab} alt="Gitlab" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Gitlab</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={github} alt="Github" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Github</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={netlify} alt="Netlify" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Netlify</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={npm} alt="npm" height="60" width="60" />
+                <span className="pt-1">npm</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={yarn} alt="yarn" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">yarn</span>
+              </NavItem>
+            </motion.div>
           </Nav>
         </TabPane>
         <TabPane tabId="3">
           <Nav className='react-ul'>
-            <NavItem className='react-li'>
-              <img src={js} alt="JS" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">JavaScript</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={ts} alt="" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">TypeScript</span>
-            </NavItem>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={js} alt="JS" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">JavaScript</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={ts} alt="" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">TypeScript</span>
+              </NavItem>
+            </motion.div>
           </Nav>
         </TabPane>
         <TabPane tabId="4">
           <Nav className='react-ul'>
-            <NavItem className='react-li'>
-              <img src={vscode} alt="React" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">Vscode</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={postman} alt="Redux" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">Postman</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={atom} alt="JQuery" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
-              <span className="pt-1">Atom</span>
-            </NavItem>
-            <NavItem className='react-li'>
-              <img src={figma} alt="" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }}/>
-              <span className="pt-1">Figma</span>
-            </NavItem>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={vscode} alt="React" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Vscode</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={postman} alt="Redux" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Postman</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={atom} alt="JQuery" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Atom</span>
+              </NavItem>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}>
+              <NavItem className='react-li'>
+                <img src={figma} alt="" height="60" width="60" style={{ color: "rgb(25, 115, 183)" }} />
+                <span className="pt-1">Figma</span>
+              </NavItem>
+            </motion.div>
           </Nav>
         </TabPane>
       </TabContent>
