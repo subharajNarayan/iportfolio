@@ -59,6 +59,9 @@
 }
 
 @media only screen and (max-width: 767px) {
+  #projects-content {
+    margin-top: 8rem;
+  }
   .projects {
     &-details {
       &-container {

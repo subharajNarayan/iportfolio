@@ -52,7 +52,7 @@
 
     &-uppertext {
       margin-top: 30px;
-      font-size: 22px;
+      font-size: 1rem!important;
     }
   }
 
@@ -202,7 +202,7 @@
 
 @media only screen and (max-width: 767px) {
   #about-content {
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
   .about {
     height: auto;
@@ -226,31 +226,38 @@
           white-space: nowrap;
         }
       }
+      &-bottom{
+        display: block!important;
+      }
       &-social-media {
         margin-left: 0;
 
         ul {
+          justify-content: center;
+          margin-top: 1rem;
           li {
             a {
+              width: 75px!important;
+              height: 75px!important;
               &::before {
                 content: "";
                 position: absolute;
                 width: 35px;
                 height: 35px;
                 background: #1DA1F2;
-                right: 31px;
+                right: 24px;
                 border-radius: 10px;
                 z-index: -1;
                 transform-origin: 100% 100%;
-                transform: rotate(10deg);
+                transform: rotate(15deg);
                 transition: 0.3s;
               }
 
               &::after {
                 content: "";
                 position: absolute;
-                left: 31px;
-                top: 32px;
+                left: 18px;
+                top: 17px;
                 width: 35px;
                 height: 35px;
                 border-radius: 10px;
