@@ -201,26 +201,24 @@
 }
 
 @media only screen and (max-width: 767px) {
+  #about-content {
+    margin-top: 5rem;
+  }
   .about {
     height: auto;
-
     &-details {
       &-heading {
         margin: 0;
       }
-
       &-container {
         margin-right: -15px !important;
       }
-
       &-uppertext {
         font-size: 16px;
       }
-
       &-bottom {
         // display: block;
       }
-
       &-resume {
         padding-left: 0;
 
@@ -228,7 +226,6 @@
           white-space: nowrap;
         }
       }
-
       &-social-media {
         margin-left: 0;
 

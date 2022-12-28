@@ -56,10 +56,56 @@
 
 .color-block {
   position: absolute;
-  height: 80%;
-  width: 60%;
-  transform: rotate(74deg);
-  left: -27.5%;
-  top: 10.14%;
+  height: 198rem;
+  width: 300px;
+  transform: rotate(-15deg);
+  left: -423px;
+  top: -156.87rem;
   background-color: #ffb400;
+}
+
+
+@media only screen and (max-width: 767px) {
+  #home{
+    height:auto!important;
+  }
+  .home{
+    &-details{
+      &-container{
+        margin-right: -15px!important;
+      }
+      &-uppertext{
+        text-align: center;
+        h2{
+          padding-left: 0px!important;
+          &::before{
+            content: none!important;
+          }
+        }
+      }
+      &-language{
+        padding-left: 0px!important;
+      }
+      &-text{
+        padding-left: 0px!important;
+      }
+      &-resume{
+        padding-left: 0px!important;
+      }
+    }
+  }
+  .mobile {
+    text-align: center;
+    margin-top: 4rem;
+    img {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      color: transparent;
+      &.img-mobile {
+        border: 4px solid #252525;
+        margin: 0 auto 30px;
+      }
+    }
+  }
 }
