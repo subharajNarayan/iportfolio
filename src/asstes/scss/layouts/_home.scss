@@ -100,11 +100,13 @@
     img {
       width: 230px;
       height: 230px;
-      border-radius: 50%;
+      border-radius: 100%;
       color: transparent;
       &.img-mobile {
-        border: 4px solid #252525;
+        border: 3px solid ;
+        background: linear-gradient(to right, #10C296, #ef4444, #1e293b);
         margin: 0 auto 30px;
+        object-fit: cover;
       }
     }
   }

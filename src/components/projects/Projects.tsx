@@ -5,6 +5,7 @@ import logo from '../../asstes/images/subharaj.jpg';
 import ams from '../../asstes/images/projects/ams.png';
 import order from '../../asstes/images/projects/order.png';
 import dssha from '../../asstes/images/projects/dssha.png';
+import portfolio from '../../asstes/images/projects/portfolio.png';
 
 type Props = {}
 
@@ -94,7 +95,7 @@ const Projects = (props: Props) => {
               whileHover={{
                 scale: 1.1,
               }}>
-                <img src={logo} alt="AMS" width="100%" />
+                <img src={portfolio} alt="AMS" width="100%" />
               {IsPortfolio && (
                 <div className='projects-details-content'>
                   <h2 className='mb-1'>PORTFOLIO</h2>

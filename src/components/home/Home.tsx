@@ -1,21 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import About from '../about/About';
 import Contact from '../contact/Contact';
-// import Header from '../header/Header';
 import Sidebar from '../sidebar/RightSidebar';
 import Technology from '../technology/Technology';
-import { Link } from 'react-router-dom';
 import Experiences from '../experiences/Experiences';
+import Projects from '../projects/Projects';
 import Footer from '../footer/Footer';
 
+import { Helmet } from 'react-helmet';
+
 import profile from '../../asstes/images/subharaj.jpg';
-import Projects from '../projects/Projects';
+// import profile from '../../asstes/images/subharajremove.png';
+
 
 const Home = () => {
 
   const [isVisible, setVisible] = React.useState(false);
   const domRef = React.useRef<any>();
-  
+
   React.useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setVisible(entry.isIntersecting));
@@ -23,8 +26,13 @@ const Home = () => {
     observer.observe(domRef.current);
   }, []);
 
+
   return (
     <>
+      <Helmet>
+        <title>Subharaj Chaudhary | React Developer</title>
+      </Helmet>
+
       <div className='yellow'>
         <div className='react-tabs'>
           {/* <Header /> */}
@@ -34,7 +42,7 @@ const Home = () => {
           <div className='tab-panel_list'>
             <div className='color-block d-none d-lg-block'></div>
             <div id='home' className={`home react-tabs__tab-panel--selected fadein-section ${isVisible ? 'is-visible' : ''}`}
-            ref={domRef}>
+              ref={domRef}>
               <div className='container-fluid main-container container-home g-0 aos-init aos-animate'>
                 <div className='row home-details-container d-flex align-item-center'>
                   <div className='col-lg-3 bg d-none d-lg-block'>
@@ -48,19 +56,19 @@ const Home = () => {
                       <h2 className="text-uppercase poppins-font">
                         {/* Hello I'm  <br /> */}
                         <span className='username'>
-                         I'm Subharaj Narayan Chaudhary
+                          I'm Subharaj Narayan Chaudhary
                         </span>
                       </h2>
                       <div className='home-details-language pb-3'>
                         <h4>I am a <span>Frontend React</span> Developer</h4>
                       </div>
                       <div className='home-details-text'>
-                        <p>I'm a Tunisian based web designer & front‑end developer focused on crafting clean & user‑friendly experiences,
+                        <p>I'm a Frontend web designer & software developer focused on crafting clean & user‑friendly experiences,
                           I am passionate about building excellent software that improves the lives of those around me.</p>
                       </div>
                       <div className='home-details-resume'>
                         <Link to="contact-content">
-                        <button className='btn btn-primary'>Get In Touch</button>
+                          <button className='btn btn-primary'>Get In Touch</button>
                         </Link>
                       </div>
                     </div>
@@ -69,7 +77,7 @@ const Home = () => {
               </div>
             </div>
             <div className='about-section mb-5' id='about-content' >
-            {/* style={{minHeight: "590px"}} */}
+              {/* style={{minHeight: "590px"}} */}
               <About />
             </div>
             <div className='technology-section mb-5' id='technology-content'>
