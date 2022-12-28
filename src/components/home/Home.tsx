@@ -15,7 +15,7 @@ const Home = () => {
 
   const [isVisible, setVisible] = React.useState(false);
   const domRef = React.useRef<any>();
-  
+
   React.useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setVisible(entry.isIntersecting));
@@ -32,16 +32,16 @@ const Home = () => {
           <Sidebar />
 
           <div className='tab-panel_list'>
-            <div className='color-block d-none d-lg-block'></div>
             <div id='home' className={`home react-tabs__tab-panel--selected fadein-section ${isVisible ? 'is-visible' : ''}`}
-            ref={domRef}>
+              ref={domRef}>
               <div className='container-fluid main-container container-home p-0 g-0 aos-init aos-animate'>
                 <div className='row home-details-container d-flex align-item-center'>
+                  <div className='color-block d-none d-lg-block fadestop-section'></div>
                   <div className='col-lg-3 bg d-none d-lg-block'>
                     <img src={profile} alt="Subharaj Narayan Chaudhary" />
                   </div>
                   <div className='col-lg-3 bg d-lg-none d-block'>
-                    <img src={profile} alt="Subharaj Narayan Chaudhary" />
+                    <img src={profile} alt="Subharaj Narayan Chaudhary"/>
                   </div>
                   <div className='col-lg-8 col-12 offset-lg-4 home-details text-lg-start'>
                     <div className='home-details-uppertext'>
@@ -60,7 +60,7 @@ const Home = () => {
                       </div>
                       <div className='home-details-resume'>
                         <Link to="contact-content">
-                        <button className='btn btn-primary'>Get In Touch</button>
+                          <button className='btn btn-primary'>Get In Touch</button>
                         </Link>
                       </div>
                     </div>
@@ -69,7 +69,7 @@ const Home = () => {
               </div>
             </div>
             <div className='about-section mb-5' id='about-content' >
-            {/* style={{minHeight: "590px"}} */}
+              {/* style={{minHeight: "590px"}} */}
               <About />
             </div>
             <div className='technology-section mb-5' id='technology-content'>

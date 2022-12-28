@@ -31,7 +31,7 @@ const Projects = (props: Props) => {
       <div className='container main-container container-projects g-0 aos-init aos-animate'>
         <div className={`projects-details-heading text-center fade-in-section ${isVisible ? 'is-visible' : ''}`}
           ref={domRef}>
-          <h1><strong>Projects</strong><span>I've Built</span></h1>
+          <h1><strong>Projects</strong> <span>I've Built</span></h1>
           <span>Here are some Example What I've created</span>
         </div>
         <div className={`row pt-5 container projects-details-container d-flex justify-center fade-in-section ${isVisible ? 'is-visible' : ''}`}

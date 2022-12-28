@@ -70,3 +70,17 @@
   transform: none;
   visibility: visible;
 }
+
+.fadestop-section {
+  opacity: 2;
+  transform:none;
+  // visibility: hidden;
+  transition:none;
+  will-change: opacity, transform, visibility;
+}
+
+.fadestop-section.is-visible {
+  opacity: 10;
+  transform: none;
+  visibility: visible;
+}
