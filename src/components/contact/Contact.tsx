@@ -1,8 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { send } from 'emailjs-com';
 
 type Props = {}
 
+
+// Gmail serviceID = service_rcfyljn
+
+// Gmail TemplateID = template_21q0ju5
+
+// Gmail PublicKEY = SczQnJeIS8s0MGppd
+
+// Gmail PrivateKEY = vZwXkZKiyJr5dj1IA-_OL
+
 const Contact = (props: Props) => {
+
+  const [toSend, setToSend] = React.useState({
+    to_name: '',
+    from_name: '',
+    message: '',
+  });
 
   const [isVisible, setVisible] = React.useState(false);
   const domRef = React.useRef<any>();
@@ -13,6 +29,26 @@ const Contact = (props: Props) => {
     });
     observer.observe(domRef.current);
   }, []);
+
+  const onSubmit = (e:any) => {
+    e.preventDefault();
+    send(
+      'service_rcfyljn',
+      'template_21q0ju5',
+      toSend,
+      'SczQnJeIS8s0MGppd'
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
+  };
+
+  const handleChange = (e:any) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
 
   return (
     <div className="contact react-tabs__tab-panel--selected">
@@ -60,23 +96,36 @@ const Contact = (props: Props) => {
             </div>
           </div>
           <div className='col-lg-7 col-12 contact-form text-lg-start'>
-            <form>
+            <form onSubmit={onSubmit}>
               <div className='row contact-form-info'>
                 <div className='col-lg-6'>
                   <div className='form-group name'>
-                    {/* <label htmlFor="">Name</label> */}
-                    <input type="text" className='form-control' placeholder='Name'/>
+                    <input type="text" className='form-control' 
+                    name='to_name'
+                    onChange={handleChange}
+                    value={toSend.to_name}
+                    placeholder='Name' />
                   </div>
                 </div>
                 <div className='col-lg-6'>
                   <div className='form-group email'>
                     {/* <label htmlFor="">Email</label> */}
-                    <input type="text" className='form-control' placeholder='Email'/>
+                    <input type="text" className='form-control' 
+                    name='from_name'
+                    onChange={handleChange}
+                    value={toSend.from_name}
+                    placeholder='Email'/>
                   </div>
                 </div>
               </div>
               <div className='form-group contact-form-message'>
-                <textarea name="message" id="message" cols={20} rows={5} className="form-control" placeholder='Message'></textarea>
+                <textarea name="message" id="message" 
+                cols={20} rows={5} 
+                className="form-control" 
+                onChange={handleChange}
+                value={toSend.message}
+                placeholder='Message'>
+                </textarea>
               </div>
               <div className='contact-form-button'>
                 <button type='submit' className='btn btn-outline-primary'>Submit</button>

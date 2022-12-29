@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Nav, NavItem } from 'reactstrap';
 
@@ -79,9 +80,8 @@ const Experiences = (props: Props) => {
                 <Nav className='order-sathi mb-3'>
                   <NavItem>
                     <h6>Sales for E-commerce (Order-Sathi)</h6>
-                    <span>The asset management tools comprising a web dashboard,
-                      a configuration panel and a mobile app are developed to support the management of
-                      assets and making asset management plans for water systems.</span>
+                    <span>The Sales and Order for E-commerce(Order-Sathi) comprising a website which developed for
+                      buying or selling of products on online services or over the Internet that makes people easier.</span>
                     <Nav>
                       <NavItem className='pl-0'>
                         <span>React Framework</span>
@@ -112,9 +112,8 @@ const Experiences = (props: Props) => {
                 <Nav className='order-sathi mb-3'>
                   <NavItem>
                     <h6>Down Syndrome of Association (DSSHA-Nepal)</h6>
-                    <span>The asset management tools comprising a web dashboard,
-                      a configuration panel and a mobile app are developed to support the management of
-                      assets and making asset management plans for water systems.</span>
+                    <span>DSSHA-Nepal comparising a website which is a genetic disorder caused by partial copy of abnormal cell division.
+                      Caused by abnormal cell division during the sperm or egg cell development.</span>
                     <Nav>
                       <NavItem className='pl-0'>
                         <span>WordPress</span>

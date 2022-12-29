@@ -28,10 +28,6 @@ import atom from "../../../asstes/images/atom.png";
 
 type Props = {}
 
-const boxVariant = {
-  visible: {opacity: 1, scale: 1, transition: {duration: 0.5}},
-  hidden: {opacity:0, scale: 0}
-}
 
 const Tabpanel = (props: Props) => {
 
@@ -245,9 +241,6 @@ const Tabpanel = (props: Props) => {
         <TabPane tabId="3">
           <Nav className='react-ul'>
             <motion.div
-            variants={boxVariant}
-            initial="hidden"
-            animate="visible"
               whileHover={{
                 scale: 1.1,
               }}>
@@ -257,9 +250,6 @@ const Tabpanel = (props: Props) => {
               </NavItem>
             </motion.div>
             <motion.div
-            variants={boxVariant}
-            initial="hidden"
-            animate="visible"
               whileHover={{
                 scale: 1.1,
               }}>
