@@ -19,7 +19,7 @@ const About = () => {
   };
 
   return (
-    <div className="about react-tabs__tab-panel--selected" id='about-content'>
+    <div className="about react-tabs__tab-panel--selected">
       <div className='container-fluid main-container container-about g-0 aos-init aos-animate'>
         <div className='row about-details-container d-flex align-item-center'>
           <div className='color-block d-none d-lg-block'></div>

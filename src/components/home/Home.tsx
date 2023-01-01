@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { NavLink } from 'reactstrap';
 import About from '../about/About';
 import Contact from '../contact/Contact';
 import Sidebar from '../sidebar/RightSidebar';
@@ -9,9 +9,10 @@ import Projects from '../projects/Projects';
 import Footer from '../footer/Footer';
 
 import { Helmet } from 'react-helmet';
+// import * as Scroll from 'react-scroll';
+import { Link } from "react-scroll";
 
 import profile from '../../asstes/images/subharaj.jpg';
-// import profile from '../../asstes/images/subharajremove.png';
 
 
 const Home = () => {
@@ -25,6 +26,15 @@ const Home = () => {
     });
     observer.observe(domRef.current);
   }, []);
+
+
+  // const GetInTouch = () => {
+  //   const element = document.getElementById('contact-content');
+  //   if (element) {
+  //     // 👇 Will scroll smoothly to the top of the next section
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
 
   return (
@@ -67,7 +77,10 @@ const Home = () => {
                           I am passionate about building excellent software that improves the lives of those around me.</p>
                       </div>
                       <div className='home-details-resume'>
-                        <Link to="contact-content">
+                        {/* <NavLink onClick={GetInTouch}>
+                          <button className='btn btn-primary'>Get In Touch</button>
+                        </NavLink> */}
+                        <Link activeClass="active" className="test1" to="contact-content" spy={true} smooth={true} duration={500} offset={50}>
                           <button className='btn btn-primary'>Get In Touch</button>
                         </Link>
                       </div>
@@ -77,7 +90,6 @@ const Home = () => {
               </div>
             </div>
             <div className='about-section mb-5' id='about-content' >
-              {/* style={{minHeight: "590px"}} */}
               <About />
             </div>
             <div className='technology-section mb-5' id='technology-content'>

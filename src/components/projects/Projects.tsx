@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import logo from '../../asstes/images/subharaj.jpg';
 import ams from '../../asstes/images/projects/ams.png';
 import order from '../../asstes/images/projects/order.png';
 import dssha from '../../asstes/images/projects/dssha.png';
@@ -34,7 +33,7 @@ const Projects = (props: Props) => {
   };
 
   return (
-    <section className="projects react-tabs__tab-panel--selected" id='projects-content'>
+    <section className="projects react-tabs__tab-panel--selected" >
       <div className='container main-container container-projects g-0 aos-init aos-animate'>
         <div className={`projects-details-heading text-center fade-in-section ${isVisible ? 'is-visible' : ''}`}
           ref={domRef}>

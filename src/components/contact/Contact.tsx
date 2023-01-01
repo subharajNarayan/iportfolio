@@ -1,8 +1,14 @@
 import React from 'react';
 import { send } from 'emailjs-com';
+import FormikValidationError from '../../React/FormikValidationError/FormikValidationError';
+import * as Yup from "yup";
+import { useFormik } from 'formik';
+import Button from '../../React/Forms/Buttons';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+// import toast from '../../React/ToastNotifier/ToastNotifier';
 
 type Props = {}
-
 
 // Gmail serviceID = service_rcfyljn
 
@@ -12,17 +18,87 @@ type Props = {}
 
 // Gmail PrivateKEY = vZwXkZKiyJr5dj1IA-_OL
 
+const ValidationSchema = Yup.object({
+  to_name: Yup.mixed().required("This field is required"),
+  from_name: Yup.mixed().required("This field is required"),
+  message: Yup.mixed().required("This field is required"),
+})
+
 const Contact = (props: Props) => {
 
-  const [toSend, setToSend] = React.useState({
-    to_name: '',
-    from_name: '',
-    message: '',
+  // const { handleSubmit, formState} = useForm
+
+  const [initialData, setInitialData] = React.useState({
+    to_name: "",
+    from_name: "",
+    message: "",
   });
+
+
+  const {
+    values,
+    errors,
+    touched,
+    handleSubmit,
+    handleBlur,
+    handleChange
+  } = useFormik({
+    enableReinitialize: true,
+    initialValues: initialData,
+    validationSchema: ValidationSchema,
+    onSubmit: (values, { resetForm }) => {
+      // e.preventDefault();
+      console.log(values, "VALUES");
+      // let response: any;
+
+      send(
+        'service_rcfyljn',
+        'template_21q0ju5',
+        values,
+        'SczQnJeIS8s0MGppd'
+      )
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          if(response.status === 200){
+            resetForm()
+            const successmessage = "Data posted successfull";
+            console.log(successmessage, "SUCCESS MESSAGE");
+            
+            toast(successmessage)
+          }else{
+            setInitialData({
+              to_name: "",
+              from_name: "",
+              message: ""
+            })
+          }
+        })
+        .catch((err) => {
+          console.log('FAILED...', err);
+          toast.error("Data posted unsuccessfull")
+        });
+        
+      // if (response.status === 200 || response.status === 201) {
+      //   if (response.status === 200) {
+      //     // resetForm();
+      //     toast.success("Data posted successfull")
+      //     console.log(toast.success,"demo");
+      //   } else {
+      //     setInitialData({
+      //       to_name: "",
+      //       from_name: "",
+      //       message: "",
+      //     })
+      //   }
+      // } else {
+      //   toast.error("Data posetd unsuccessfull ")
+      // }
+    }
+  })
 
   const [isVisible, setVisible] = React.useState(false);
   const domRef = React.useRef<any>();
-  
+
   React.useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setVisible(entry.isIntersecting));
@@ -30,37 +106,20 @@ const Contact = (props: Props) => {
     observer.observe(domRef.current);
   }, []);
 
-  const onSubmit = (e:any) => {
-    e.preventDefault();
-    send(
-      'service_rcfyljn',
-      'template_21q0ju5',
-      toSend,
-      'SczQnJeIS8s0MGppd'
-    )
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-      })
-      .catch((err) => {
-        console.log('FAILED...', err);
-      });
-  };
-
-  const handleChange = (e:any) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
-  };
-
   return (
     <div className="contact react-tabs__tab-panel--selected">
+      
+      <ToastContainer />
+
       <div className={`container-fluid main-container container g-0 aos-init aos-animate fade-in-section ${isVisible ? 'is-visible' : ''}`}
-            ref={domRef}>
-              {/* <div className='container-fluid main-container container p-0 g-0 aos-init aos-animate'> */}
+        ref={domRef}>
+        {/* <div className='container-fluid main-container container p-0 g-0 aos-init aos-animate'> */}
         <div className='contact-details-heading'>
           <h1> <strong> Get <span>in</span> Touch </strong></h1>
           <span className='title-bg'>Contact</span>
         </div>
         <div className={`row contact-details-container d-flex align-item-center fade-in-section ${isVisible ? 'is-visible' : ''}`}
-            ref={domRef}>
+          ref={domRef}>
           <div className='col-lg-5 col-12 contact-details-leftsidebar'>
             <h3 className='pb-3'>Don't be Shy</h3>
             <p>Feel free to get in touch with me. I am always open to discussing new projects,
@@ -80,7 +139,7 @@ const Contact = (props: Props) => {
                     Mail Me
                   </span>
                   <a href="mailto:subharazzchy68@gmail.com">
-                    <strong style={{marginLeft:"5px"}}>subharazzchy68@gmail.com</strong>
+                    <strong style={{ marginLeft: "5px" }}>subharazzchy68@gmail.com</strong>
                   </a>
                 </li>
                 <li className='pt-5'>
@@ -96,39 +155,55 @@ const Contact = (props: Props) => {
             </div>
           </div>
           <div className='col-lg-7 col-12 contact-form text-lg-start'>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit(e);
+            }}>
               <div className='row contact-form-info'>
                 <div className='col-lg-6'>
                   <div className='form-group name'>
-                    <input type="text" className='form-control' 
-                    name='to_name'
-                    onChange={handleChange}
-                    value={toSend.to_name}
-                    placeholder='Name' />
+                    <input type="text" className='form-control'
+                      name='to_name'
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.to_name}
+                      placeholder='Name' />
+                    <FormikValidationError name="to_name" errors={errors} touched={touched} />
                   </div>
                 </div>
                 <div className='col-lg-6'>
                   <div className='form-group email'>
                     {/* <label htmlFor="">Email</label> */}
-                    <input type="text" className='form-control' 
-                    name='from_name'
-                    onChange={handleChange}
-                    value={toSend.from_name}
-                    placeholder='Email'/>
+                    <input type="text" className='form-control'
+                      name='from_name'
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.from_name}
+                      placeholder='Email' />
+                    <FormikValidationError name="from_name" errors={errors} touched={touched} />
                   </div>
                 </div>
               </div>
               <div className='form-group contact-form-message'>
-                <textarea name="message" id="message" 
-                cols={20} rows={5} 
-                className="form-control" 
-                onChange={handleChange}
-                value={toSend.message}
-                placeholder='Message'>
+                <textarea name="message" id="message"
+                  cols={20} rows={5}
+                  className="form-control"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.message}
+                  placeholder='Message'>
                 </textarea>
+                <FormikValidationError name="message" errors={errors} touched={touched} />
               </div>
               <div className='contact-form-button'>
-                <button type='submit' className='btn btn-outline-primary'>Submit</button>
+                {/* <button type='submit' className='btn btn-outline-primary'>Submit</button> */}
+                <Button
+                  className="btn custom-btn mr-3"
+                  text={"Submit"}
+                  type="submit"
+                  // disabled={props.postLoading || props.updateLoading}
+                  // loading={props.postLoading || props.updateLoading}
+                />
               </div>
             </form>
           </div>

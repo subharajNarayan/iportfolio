@@ -17,7 +17,7 @@ const Experiences = (props: Props) => {
   }, []);
 
   return (
-    <div className="experience react-tabs__tab-panel--selected" id='experience-content'>
+    <div className="experience react-tabs__tab-panel--selected" >
       <div className='container main-container container-experience g-0 aos-init aos-animate'>
         <div className={`experience-details-heading fade-in-section ${isVisible ? 'is-visible' : ''}`}
           ref={domRef}>
