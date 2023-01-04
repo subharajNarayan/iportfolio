@@ -21,7 +21,7 @@ const Experiences = (props: Props) => {
       <div className='container main-container container-experience g-0 aos-init aos-animate'>
         <div className={`experience-details-heading fade-in-section ${isVisible ? 'is-visible' : ''}`}
           ref={domRef}>
-          <h1>My <strong>Experiences</strong></h1>
+          <h2>My <strong>Experiences</strong></h2>
         </div>
         <div className={`row p-5 container experience-details-container fade-in-section ${isVisible ? 'is-visible' : ''}`}
           ref={domRef}>

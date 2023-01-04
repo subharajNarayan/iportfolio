@@ -55,55 +55,73 @@
 // }
 
 .color-block {
+  // position: absolute;
+  // height: 198rem;
+  // width: 300px;
+  // transform: rotate(-15deg);
+  // left: -423px;
+  // top: -156.87rem;
+  // background-color: #ffb400;
+
   position: absolute;
   height: 198rem;
-  width: 300px;
-  transform: rotate(-15deg);
+  width: 357px;
+  transform: rotate(-14deg);
   left: -423px;
-  top: -156.87rem;
+  top: -154.6rem;
   background-color: #ffb400;
 }
 
 
 @media only screen and (max-width: 767px) {
-  #home{
-    height:auto!important;
+  #home {
+    height: auto !important;
   }
-  .home{
-    &-details{
-      &-container{
-        margin-right: -15px!important;
+
+  .home {
+    &-details {
+      &-container {
+        margin-right: -15px !important;
       }
-      &-uppertext{
+
+      &-uppertext {
         text-align: center;
-        h2{
-          padding-left: 0px!important;
-          &::before{
-            content: none!important;
+
+        h2 {
+          padding-left: 0px !important;
+
+          &::before {
+            content: none !important;
           }
         }
       }
-      &-language{
-        padding-left: 0px!important;
+
+      &-language {
+        padding-left: 0px !important;
       }
-      &-text{
-        padding-left: 0px!important;
+
+      &-text {
+        padding-left: 0px !important;
       }
-      &-resume{
-        padding-left: 0px!important;
+
+      &-resume {
+        padding-left: 0px !important;
       }
     }
   }
+
   .mobile {
     text-align: center;
     margin-top: 4rem;
+
     img {
       width: 230px;
       height: 230px;
       border-radius: 100%;
       color: transparent;
+
       &.img-mobile {
-        border: 3px solid ;
+        border: 3px solid;
         background: linear-gradient(to right, #10C296, #ef4444, #1e293b);
         margin: 0 auto 30px;
         object-fit: cover;
