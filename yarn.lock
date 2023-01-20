@@ -7490,6 +7490,14 @@ react-app-polyfill@^3.0.0:
     regenerator-runtime "^0.13.9"
     whatwg-fetch "^3.6.2"
 
+react-circle-badge@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-circle-badge/-/react-circle-badge-0.0.2.tgz#f73d13140cc5a945f9ace0f990d49569b6353e1a"
+  integrity sha512-ppB5VGtC8G+94vKw/YYoyjKrQxw0PvRLleUsBH6a2tBuC+mmVnzvarAv8CANrpTrSPboR8YR35+7HTsLBMDDuA==
+  dependencies:
+    react "^16.2.0"
+    react-dom "^16.2.0"
+
 react-dev-utils@^12.0.1:
   version "12.0.1"
   resolved "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-12.0.1.tgz"
@@ -7520,7 +7528,7 @@ react-dev-utils@^12.0.1:
     strip-ansi "^6.0.1"
     text-table "^0.2.0"
 
-react-dom@16.14.0:
+react-dom@16.14.0, react-dom@^16.2.0:
   version "16.14.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz"
   integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
@@ -7680,6 +7688,11 @@ react-scripts@^5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-scroll-to-top@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-scroll-to-top/-/react-scroll-to-top-3.0.0.tgz#002984419d4d10fdb5654c9e3dd3341f81209a60"
+  integrity sha512-I/k45Ujai097du59tHBbzGxN7Lyc6K8Uc3IChq6HMXaBfB8N/rrfm055T5Yv0DWfVpf6pOFaBmhD3LOfH5unGw==
+
 react-scroll@^1.8.9:
   version "1.8.9"
   resolved "https://registry.npmjs.org/react-scroll/-/react-scroll-1.8.9.tgz"
@@ -7710,7 +7723,7 @@ react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@16.14.0:
+react@16.14.0, react@^16.2.0:
   version "16.14.0"
   resolved "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { NavLink } from 'reactstrap';
 import About from '../about/About';
 import Contact from '../contact/Contact';
 import Sidebar from '../sidebar/RightSidebar';
@@ -9,7 +8,6 @@ import Projects from '../projects/Projects';
 import Footer from '../footer/Footer';
 
 import { Helmet } from 'react-helmet';
-// import * as Scroll from 'react-scroll';
 import { Link } from "react-scroll";
 
 import profile from '../../asstes/images/subharaj.jpg';
@@ -27,16 +25,6 @@ const Home = () => {
     observer.observe(domRef.current);
   }, []);
 
-
-  // const GetInTouch = () => {
-  //   const element = document.getElementById('contact-content');
-  //   if (element) {
-  //     // 👇 Will scroll smoothly to the top of the next section
-  //     element.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // };
-
-
   return (
     <>
       <Helmet>
@@ -45,8 +33,6 @@ const Home = () => {
 
       <div className='yellow'>
         <div className='react-tabs'>
-          {/* <Header /> */}
-
           <Sidebar />
 
           <div className='tab-panel_list'>

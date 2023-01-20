@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.scss';
 import { BrowserRouter } from 'react-router-dom';
 // import Main from './components/Main';
 import Home from './components/home/Home';
+import ScrollToTop from 'react-scroll-to-top';
+import FallbackLoader from './React/FallBackLoader/FallBackLoader';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
+    <Suspense fallback={<FallbackLoader />}>
+      <div>
         <Home />
-      </BrowserRouter>
-    </>
+        <ScrollToTop smooth />
+      </div>
+    </Suspense>
   );
 }
 

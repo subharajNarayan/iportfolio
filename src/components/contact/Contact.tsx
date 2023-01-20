@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useFormik } from 'formik';
 import Button from '../../React/Forms/Buttons';
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 // import toast from '../../React/ToastNotifier/ToastNotifier';
 
 type Props = {}
@@ -26,7 +26,7 @@ const ValidationSchema = Yup.object({
 
 const Contact = (props: Props) => {
 
-  // const { handleSubmit, formState} = useForm
+  const [loader, setLoader] = React.useState(false);
 
   const [initialData, setInitialData] = React.useState({
     to_name: "",
@@ -47,10 +47,8 @@ const Contact = (props: Props) => {
     initialValues: initialData,
     validationSchema: ValidationSchema,
     onSubmit: (values, { resetForm }) => {
-      // e.preventDefault();
       console.log(values, "VALUES");
-      // let response: any;
-
+      setLoader(true);
       send(
         'service_rcfyljn',
         'template_21q0ju5',
@@ -64,7 +62,9 @@ const Contact = (props: Props) => {
             const successmessage = "Data posted successfull";
             console.log(successmessage, "SUCCESS MESSAGE");
             
-            toast(successmessage)
+            toast.success(successmessage)
+            setLoader(false)
+
           }else{
             setInitialData({
               to_name: "",
@@ -75,24 +75,8 @@ const Contact = (props: Props) => {
         })
         .catch((err) => {
           console.log('FAILED...', err);
-          toast.error("Data posted unsuccessfull")
+          toast.error("Sorry!! server error")
         });
-        
-      // if (response.status === 200 || response.status === 201) {
-      //   if (response.status === 200) {
-      //     // resetForm();
-      //     toast.success("Data posted successfull")
-      //     console.log(toast.success,"demo");
-      //   } else {
-      //     setInitialData({
-      //       to_name: "",
-      //       from_name: "",
-      //       message: "",
-      //     })
-      //   }
-      // } else {
-      //   toast.error("Data posetd unsuccessfull ")
-      // }
     }
   })
 
@@ -196,13 +180,12 @@ const Contact = (props: Props) => {
                 <FormikValidationError name="message" errors={errors} touched={touched} />
               </div>
               <div className='contact-form-button'>
-                {/* <button type='submit' className='btn btn-outline-primary'>Submit</button> */}
                 <Button
                   className="btn custom-btn mr-3"
                   text={"Submit"}
                   type="submit"
                   // disabled={props.postLoading || props.updateLoading}
-                  // loading={props.postLoading || props.updateLoading}
+                  loading={loader}
                 />
               </div>
             </form>
