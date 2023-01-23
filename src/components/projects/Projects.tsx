@@ -119,7 +119,7 @@ const Projects = (props: Props) => {
                 {IsPortfolio && (
                   <div className='projects-details-content'>
                     <h2 className='mb-1'>PORTFOLIO</h2>
-                    <p className='leading-relaxed'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo accusantium tempora quidem vitae laborum consequatur nihil voluptate? Ullam illo provident vel earum tempore, beatae aliquid facilis minima veniam neque magni?</p>
+                    <p className='leading-relaxed'>I'm a Frontend web designer & software developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
                   </div>
                 )}
               </motion.div>
@@ -131,4 +131,4 @@ const Projects = (props: Props) => {
   )
 }
 
-export default Projects
+export default Projects;

@@ -1,6 +1,5 @@
 import React from 'react';
 import Hamburger from 'hamburger-react';
-// import { Link } from 'react-router-dom';
 import { Link } from 'react-scroll';
 
 const Sidebar = () => {

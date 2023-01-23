@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import './App.scss';
-import { BrowserRouter } from 'react-router-dom';
 // import Main from './components/Main';
 import Home from './components/home/Home';
 import ScrollToTop from 'react-scroll-to-top';
