@@ -71,6 +71,27 @@
   visibility: visible;
 }
 
-.scroll-to-top{
+.scroll-to-top {
   border-radius: 50px !important;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+.scroll-to-top svg {
+  height: 18px !important;
+}
+
+@keyframes bounce{
+  0% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-7px);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
