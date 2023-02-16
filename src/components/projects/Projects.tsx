@@ -6,6 +6,7 @@ import order from '../../asstes/images/projects/order.png';
 import dssha from '../../asstes/images/projects/dssha.png';
 import portfolio from '../../asstes/images/projects/portfolio.png';
 import { NavItem, NavLink } from 'reactstrap';
+// import QRCode from 'react-qr-code';
 
 type Props = {}
 
@@ -19,6 +20,8 @@ const Projects = (props: Props) => {
 
   const [isVisible, setVisible] = React.useState(false);
   const domRef = React.useRef<any>();
+
+  // const [ url,setUrl ] = React.useState("subharaj.com.np");
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -127,7 +130,12 @@ const Projects = (props: Props) => {
           </div>
         </div>
       </div>
+
+      {/* <div className='qr_code'>
+        <QRCode value={url}/>
+      </div> */}
     </section>
+    
   )
 }
 

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap'
 
-type Props = {}
-
-const footer = (props: Props) => {
+const footer = () => {
 
   const openInNewTab = (url:any) => {
     // 👇️ setting target to _blank with window.open
@@ -51,4 +49,4 @@ const footer = (props: Props) => {
   )
 }
 
-export default footer
+export default footer;
