@@ -11,11 +11,13 @@ import { Helmet } from 'react-helmet';
 import { Link } from "react-scroll";
 
 import profile from '../../asstes/images/subharaj.jpg';
-
+import { ClipLoader } from 'react-spinners';
 
 const Home = () => {
 
   const [isVisible, setVisible] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
+
   const domRef = React.useRef<any>();
 
   React.useEffect(() => {
@@ -23,6 +25,12 @@ const Home = () => {
       entries.forEach(entry => setVisible(entry.isIntersecting));
     });
     observer.observe(domRef.current);
+  }, []);
+
+  React.useEffect(() => {
+    window.onload = () => {
+      setIsLoading(false);
+    };
   }, []);
 
   return (
@@ -42,7 +50,13 @@ const Home = () => {
               <div className='container-fluid main-container container-home g-0 aos-init aos-animate'>
                 <div className='row home-details-container d-flex align-item-center'>
                   <div className='col-lg-3 bg d-none d-lg-block'>
+                    {isLoading ? (
+                      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+                        <ClipLoader color="#fefefe" />
+                      </div>
+                    ) : ( 
                     <img src={profile} alt="Subharaj Narayan Chaudhary" />
+                    )}
                   </div>
                   <div className='col-lg-3 col-12 mobile d-lg-none d-block'>
                     <img className='img-mobile' src={profile} alt="Subharaj Narayan Chaudhary" />

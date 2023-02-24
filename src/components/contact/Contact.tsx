@@ -151,7 +151,9 @@ const Contact = (props: Props) => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.to_name}
-                      placeholder='Name' />
+                      placeholder='Name' 
+                      autoComplete='off'
+                      />
                     <FormikValidationError name="to_name" errors={errors} touched={touched} />
                   </div>
                 </div>
@@ -163,7 +165,9 @@ const Contact = (props: Props) => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.from_name}
-                      placeholder='Email' />
+                      placeholder='Email' 
+                      autoComplete='off'
+                      />
                     <FormikValidationError name="from_name" errors={errors} touched={touched} />
                   </div>
                 </div>
@@ -175,8 +179,9 @@ const Contact = (props: Props) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.message}
-                  placeholder='Message'>
-                </textarea>
+                  placeholder='Message' 
+                  autoComplete='off' />
+                {/* </textarea> */}
                 <FormikValidationError name="message" errors={errors} touched={touched} />
               </div>
               <div className='contact-form-button'>
@@ -184,7 +189,6 @@ const Contact = (props: Props) => {
                   className="btn custom-btn mr-3"
                   text={"Submit"}
                   type="submit"
-                  // disabled={props.postLoading || props.updateLoading}
                   loading={loader}
                 />
               </div>
