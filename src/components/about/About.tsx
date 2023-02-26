@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav,NavItem, NavLink } from 'reactstrap';
+// import resume from '../../asstes/resume/resume.pdf';
 
 const About = () => {
 
@@ -17,6 +18,16 @@ const About = () => {
     // 👇️ setting target to _blank with window.open
     window.open(url, '_blank', 'noopener,noreferrer');
   };
+  
+  const resume = require('../../asstes/resume/resume.pdf');
+
+  const MyResume = () => {
+    return <a href= {resume} target="_blank" rel="noopener noreferrer">
+    <button className='btn btn-primary'>
+      My Resume
+      </button>
+    </a>
+  }
 
   return (
     <div className="about react-tabs__tab-panel--selected">
@@ -46,9 +57,12 @@ const About = () => {
             {/* <div className='about-details-bottom d-flex'> */}
             <div className={`about-details-bottom d-flex fade-in-section ${isVisible ? 'is-visible' : ''}`}
               ref={domRef}>
+
               <div className='about-details-resume'>
-                <button className='btn btn-primary'>My Resume</button>
+                {/* <button className='btn btn-primary' onClick={Resume}>My Resume</button> */}
+                {MyResume()}
               </div>
+
               <div className='about-details-social-media'>
                 <Nav>
                   <NavItem>

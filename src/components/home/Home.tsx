@@ -52,7 +52,7 @@ const Home = () => {
                   <div className='col-lg-3 bg d-none d-lg-block'>
                     {isLoading ? (
                       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-                        <ClipLoader color="#fefefe" />
+                        <ClipLoader color="#36d7b7" size={60}/>
                       </div>
                     ) : ( 
                     <img src={profile} alt="Subharaj Narayan Chaudhary" />
