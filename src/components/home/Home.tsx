@@ -11,12 +11,12 @@ import { Helmet } from 'react-helmet';
 import { Link } from "react-scroll";
 
 import profile from '../../asstes/images/subharaj.jpg';
-import { ClipLoader } from 'react-spinners';
+// import { ClipLoader } from 'react-spinners';
 
 const Home = () => {
 
   const [isVisible, setVisible] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(true);
+  // const [isLoading, setIsLoading] = React.useState(true);
 
   const domRef = React.useRef<any>();
 
@@ -27,11 +27,11 @@ const Home = () => {
     observer.observe(domRef.current);
   }, []);
 
-  React.useEffect(() => {
-    window.onload = () => {
-      setIsLoading(false);
-    };
-  }, []);
+  // React.useEffect(() => {
+  //   window.onload = () => {
+  //     setIsLoading(false);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -50,13 +50,14 @@ const Home = () => {
               <div className='container-fluid main-container container-home g-0 aos-init aos-animate'>
                 <div className='row home-details-container d-flex align-item-center'>
                   <div className='col-lg-3 bg d-none d-lg-block'>
-                    {isLoading ? (
+                    {/* {isLoading ? (
                       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
                         <ClipLoader color="#36d7b7" size={60}/>
                       </div>
                     ) : ( 
                     <img src={profile} alt="Subharaj Narayan Chaudhary" />
-                    )}
+                    )} */}
+                    <img src={profile} alt="Subharaj Narayan Chaudhary" />
                   </div>
                   <div className='col-lg-3 col-12 mobile d-lg-none d-block'>
                     <img className='img-mobile' src={profile} alt="Subharaj Narayan Chaudhary" />

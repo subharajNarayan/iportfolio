@@ -104,7 +104,7 @@ const Projects = (props: Props) => {
                     <p className='leading-relaxed'>The Sales and Order for E-commerce(Order-Sathi) is for
                       buying or selling of products on online services or over the Internet that makes people easier.</p>
                     <NavItem className='d-flex dsa'>
-                      Link:<NavLink onClick={() => openInNewTab('https://dssha-nepal.org.np/dssha/')}>Order-Sathi</NavLink>
+                      Link:<NavLink onClick={() => openInNewTab('https://order-sathi.netlify.app/')}>Order-Sathi</NavLink>
                     </NavItem>
                   </div>
                 )}

@@ -3,7 +3,7 @@ import './App.scss';
 import Home from './components/home/Home';
 import ScrollToTop from 'react-scroll-to-top';
 // import FallbackLoader from './React/FallBackLoader/FallBackLoader';
-import { RingLoader } from 'react-spinners';
+import { ClipLoader } from 'react-spinners';
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
     <div>
       {isPageReloading ? (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-          <RingLoader color="#36d7b7" size={100}/>
+          <ClipLoader color="#36d7b7" size={100}/>
         </div>
       ) : (
         <Home />

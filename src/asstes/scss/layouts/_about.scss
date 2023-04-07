@@ -224,7 +224,8 @@
       }
       &-resume {
         padding-left: 0;
-
+        display: flex;
+        justify-content: center;
         button {
           white-space: nowrap;
         }
