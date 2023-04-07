@@ -21,7 +21,7 @@ function App() {
     <div>
       {isPageReloading ? (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-          <ClipLoader color="#36d7b7" size={100}/>
+          <ClipLoader color="#36d7b7" size={80}/>
         </div>
       ) : (
         <Home />
