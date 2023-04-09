@@ -129,3 +129,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 1080px){
+  #technology-content {
+    margin-top: 0rem;
+  }
+  .technology-details-tabcontent {
+    .tab-pane {
+      width: 77%;
+    }
+  }
+}

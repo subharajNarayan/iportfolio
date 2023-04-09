@@ -2,32 +2,21 @@
   .home {
     &-details-container {
       .bg {
+
         // background-image: url('../../images/subharaj.jpg');
-        img{
-          // background-size: cover;
-          // background-repeat: no-repeat;
-          // background-position: top;
-          // height: calc(75vh - 50px);
-          // z-index: 999;
-          // border-radius: 20px;
-          // left: 100px;
-          // top: 18px;
-          // box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
-          // position: absolute;
-          // width: 100%;
-          // object-fit: cover;
+        img {
           background-position: top;
-background-repeat: no-repeat;
-background-size: cover;
-border-radius: 20px;
-box-shadow: 0 0 25px rgba(0,0,0,.9);
-height: calc(65vh - 50px);
-left: 115px;
-object-fit: cover;
-position: absolute;
-top: 18px;
-width: 95%;
-z-index: 999;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 20px;
+          box-shadow: 0 0 25px rgba(0, 0, 0, .9);
+          height: calc(65vh - 50px);
+          left: 115px;
+          object-fit: cover;
+          position: absolute;
+          top: 18px;
+          width: 95%;
+          z-index: 999;
         }
       }
     }
@@ -62,10 +51,12 @@ z-index: 999;
           }
         }
       }
-      &-language{
-        padding-left: 60px ;
-        h4{
-          span{
+
+      &-language {
+        padding-left: 60px;
+
+        h4 {
+          span {
             background: linear-gradient(to right, #ffb400 0%, #ef4444 50%, #1e293b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -75,10 +66,4 @@ z-index: 999;
     }
 
   }
-}
-
-
-
-@media only screen and (max-width:767px){
-  
 }

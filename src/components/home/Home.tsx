@@ -49,7 +49,7 @@ const Home = () => {
               ref={domRef}>
               <div className='container-fluid main-container container-home g-0 aos-init aos-animate'>
                 <div className='row home-details-container d-flex align-item-center'>
-                  <div className='col-lg-3 bg d-none d-lg-block'>
+                  <div className='col-lg-3 col-md-12 bg d-none d-lg-block'>
                     {/* {isLoading ? (
                       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
                         <ClipLoader color="#36d7b7" size={60}/>
@@ -59,7 +59,7 @@ const Home = () => {
                     )} */}
                     <img src={profile} alt="Subharaj Narayan Chaudhary" />
                   </div>
-                  <div className='col-lg-3 col-12 mobile d-lg-none d-block'>
+                  <div className='col-lg-3 col-md-12 col-12 mobile d-lg-none d-block'>
                     <img className='img-mobile' src={profile} alt="Subharaj Narayan Chaudhary" />
                   </div>
                   <div className='col-lg-8 col-12 offset-lg-4 home-details text-lg-start'>
